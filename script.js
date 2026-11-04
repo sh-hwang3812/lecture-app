@@ -1342,7 +1342,7 @@ function escapeHtml(str) {
 }
 
 // 초기화 진입점
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   // 상단 네비게이션 이벤트
   document.querySelectorAll('[data-nav-screen]').forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -1358,4 +1358,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initSyncModal();
   render();
-});
+}
+
+// 문서 로드 상태 안전 확인 (이미 로드 완료된 경우 즉시 실행)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
