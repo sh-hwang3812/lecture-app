@@ -1,0 +1,6 @@
+{
+  "name": "프리랜서 강의 일정 관리",
+  "description": "중복 확인 15분을 0초로 단축하는 근무표 유형의 강의 일정 관리 웹앱 (입력·목록·요약 3개 화면 및 구글 시트 연동 지원)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
